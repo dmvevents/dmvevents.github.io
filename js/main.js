@@ -54,6 +54,7 @@ var tunaWizard = {
         }
 
         //Validations
+		/*
         if (nextStep === 2) {
             if ($("#tn_name").val().trim() === "") {
                 self.setInputError($("#tn_name"));
@@ -67,6 +68,7 @@ var tunaWizard = {
                 return;
             }
         }
+		*/
 
         //Change Step
         if (nextStep > currentStep) {
@@ -90,13 +92,19 @@ var tunaWizard = {
             stepCountsEl.html("CONFIRM DETAILS");
             $(".button-container").hide();
             var stepConfirm = $(".step-confirm");
+			
             stepConfirm.find("input[name='name']").val($("#tn_name").val());
+			
+
 
             var hobbies = $("input[name='tn_hobbies[]']:checked").map(function () {
                 return this.value;
             }).get();
             stepConfirm.find("select[name='hobbies[]']").selectpicker("val", hobbies);
             stepConfirm.find(".filesContainer").text(tunaWizard.uploadedFiles.join(","));
+			
+			stepConfirm.find("input[name='cashout']").val($("#tn_cashout").val());
+
         }
 
         //Current Step Number update
@@ -245,28 +253,25 @@ var tunaWizard = {
                 return;
             }
 
-
-            var hobbyInput = $(this).find("select[name='hobbies[]']");
-            console.log(hobbyInput);
-            if (hobbyInput.find("option:selected").length === 0) {
-                //add class to parent element, because this is bootstrap-select.
-                hobbyInput.parents(".bootstrap-select").addClass("confirm-input-error").focus();
-                hobbyInput.selectpicker('toggle');
+            var accomplishInput = $(this).find("select[name='accomplish']");
+            if (accomplishInput.val() === "") {
+                accomplishInput.addClass("confirm-input-error").focus();
                 return;
             }
 
-            var genderInput = $(this).find("select[name='gender']");
-            if (genderInput.val() === "") {
-                genderInput.addClass("confirm-input-error").focus();
+
+			var cashoutInput = $(this).find("input[name='cashout']");
+            if (cashoutInput.val().trim() === "") {
+                cashoutInput.addClass("confirm-input-error").focus();
                 return;
             }
-
-            var sportInput = $(this).find("select[name='sport']");
-            if (sportInput.val() === "") {
-                sportInput.addClass("confirm-input-error").focus();
+			
+			var currentMortgageInput = $(this).find("input[name='current_mortgage']");
+            if (currentMortgageInput.val().trim() === "") {
+                currentMortgageInput.addClass("confirm-input-error").focus();
                 return;
             }
-
+			
             if (!$("input[name='agreement']").prop("checked")) {
                 swal({
                     title: "Warning!",

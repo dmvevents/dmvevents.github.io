@@ -39,9 +39,9 @@
     <div class='container'>
         <div class="row">
             <div class='tuna-signup-left col-md-4 col-sm-4'>
-                <img class='tuna-signup-logo' src='images/tuna-logo.png' alt="logo"/>
-                <p>Sexy signup form for your customers</p>
-                <p class="tuna-trial">14 Days Free Trial</p>
+                <img class='tuna-signup-logo' src='assets/img/logo3.png' alt="logo"/>
+                <p>AI Driven form for your customers</p>
+                <p class="tuna-trial">15 Day Closing</p>
                 <hr/>
                 <div class="tuna-slider-container">
                     <ul class="tuna-slider">
@@ -67,20 +67,80 @@
                 </div>
 
                 <div class="tuna-steps">
+					
                     <div class="step step-active" data-step-id='1'>
                         <label class="formLabel" for="tn_name">[Input] What is your name?</label>
                         <input type="text" class="formInput" id='tn_name' name="tn_name" autocomplete="off" spellcheck="false" />
                         <div class='help-error'><i class="icon icon-warning"></i> Name field is required!</div>
                     </div>
-                    <div class="step" data-step-id='2'>
+					
+					<div class="step" data-step-id='2'>
+						<div class="step-label">Please tell me what you looking to accomplish?</div>
+						<label class="radio-inline"><input type="radio" value="Purchase a Home Lower Interest Rates" name="tn_accomplish" checked>Purchase a Home Lower Interest Rates</label>
+						<label class="radio-inline"><input type="radio" value="Get Cash Out" name="tn_accomplish">Get Cash Out</label>
+						<label class="radio-inline"><input type="radio" value="Consolidate Debt" name="tn_accomplish">Consolidate Debt</label>
+						<label class="radio-inline"><input type="radio" value="Home Improvement" name="tn_accomplish">Home Improvement</label>
+						<label class="radio-inline"><input type="radio" value="Cash for Future Needs" name="tn_accomplish">Cash for Future Needs</label>
+						<label class="radio-inline"><input type="radio" value="Rate Reduction Finance" name="tn_accomplish">Rate Reduction Finance</label>
+						<div class='help-error'><i class="icon icon-warning"></i> You must select an option at least!</div>
+					</div> 
+					<div class="step" data-step-id='3'>
+                        <label class="formLabel" for="tn_cashout">How much Cash-Out would you like?</label>
+                        <input type="text" class="formInput" id='tn_cashout' name="tn_cashout" autocomplete="off" spellcheck="false" />
+                        <div class='help-error'><i class="icon icon-warning"></i> Name field is required!</div>
+                    </div>					
+					<div class="step"  data-step-id='4'>
+                        <label class="formLabel" for="tn_current_mortgage">What is your current mortgage balance?</label>
+                        <input type="text" class="formInput" id='tn_current_mortgage' name="tn_current_mortgage" autocomplete="off" spellcheck="false" />
+                        <div class='help-error'><i class="icon icon-warning"></i> Name field is required!</div>
+                    </div>
+					
+					<div class="step" data-step-id='5'>
+                        <label class="formLabel" for="tn_current_rate">What is your current rate?</label>
+                        <input type="text" class="formInput" id='tn_current_rate' name="tn_current_rate" autocomplete="off" spellcheck="false" />
+                        <div class='help-error'><i class="icon icon-warning"></i> Name field is required!</div>
+                    </div>	
+					<div class="step" data-step-id='6'>
+						<div class="step-label">What kind of loan do you currently have?</div>
+						<label class="radio-inline"><input type="radio" value="Get Cash Out" name="tn_accomplish">VA</label>
+						<label class="radio-inline"><input type="radio" value="Consolidate Debt" name="tn_accomplish">FHA</label>
+						<label class="radio-inline"><input type="radio" value="Home Improvement" name="tn_accomplish">Conventional</label>
+						<label class="radio-inline"><input type="radio" value="Cash for Future Needs" name="tn_accomplish">Other</label>
+						<label class="radio-inline"><input type="radio" value="Rate Reduction Finance" name="tn_accomplish">None</label>
+						<div class='help-error'><i class="icon icon-warning"></i> You must select an option at least!</div>
+					</div> 
+					<!--
+					<div class="step" data-step-id='2'>
+						<div class="step-label">[Radios] What is your gender?</div>
+						<label class="radio-inline"><input type="radio" value="MALE" name="tn_gender" checked> Male</label>
+						<label class="radio-inline"><input type="radio" value="FEMALE" name="tn_gender"> Female</label>
+						<div class='help-error'><i class="icon icon-warning"></i> You must select an option at least!</div>
+					</div> 
+					<div class="step" data-step-id='3'>
                         <div class="step-label">[Checkboxes] What are your hobbies?</div>
                         <label class="checkbox-inline"><input type="checkbox" value="READING" name="tn_hobbies[]"> Reading Books</label>
                         <label class="checkbox-inline"><input type="checkbox" value="GUITAR" name="tn_hobbies[]"> Playing Guitar</label>
                         <label class="checkbox-inline"><input type="checkbox" value="BICYCLE" name="tn_hobbies[]"> Riding Bicycle</label>
                         <label class="checkbox-inline"><input type="checkbox" value="BOWLING" name="tn_hobbies[]"> Bowling</label>
                         <div class='help-error'><i class="icon icon-warning"></i> You must select an option at least!</div>
-                    </div>  
-                    <div class="step" data-step-id='3'>
+                    </div>
+
+					<div class="step" data-step-id='2'>
+						<div class="step-label">Please tell me what you looking to accomplish?</div>
+						<label class="radio-inline"><input type="radio" value="Purchase a Home Lower Interest Rates" name="tn_phlir" checked>Purchase a Home Lower Interest Rates</label>
+						<label class="radio-inline"><input type="radio" value="Get Cash Out" name="tn_gco">Get Cash Out</label>
+						<label class="radio-inline"><input type="radio" value="Consolidate Debt" name="tn_cd">Consolidate Debt</label>
+						<label class="radio-inline"><input type="radio" value="Home Improvement" name="tn_hi" checked>Home Improvement</label>
+						<label class="radio-inline"><input type="radio" value="Cash for Future Needs" name="tn_cffn">Cash for Future Needs</label>
+						<label class="radio-inline"><input type="radio" value="Rate Reduction Finance" name="tn_rrf" checked>Rate Reduction Finance</label>
+						<div class='help-error'><i class="icon icon-warning"></i> You must select an option at least!</div>
+					</div> 
+					
+					-->
+					
+
+					<!--
+                    <div class="step" data-step-id='4'>
                         <label class="formLabel" for="tn_name">[Upload] Select upload file?</label>
                         <div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
                         <br />
@@ -93,9 +153,16 @@
                         <div class='help-error'><i class="icon icon-warning"></i> Optional!</div>
                     </div>
 
-
-                    <div class="step step-confirm" data-step-id='4'>
+					
+					<div class="step" data-step-id='3'>
+						<label class="formLabel" for="tn_name">How much Cash-Out would you like?</label>
+						<input type="text" class="formInput" id='tn_name' name="tn_name" autocomplete="off" spellcheck="false" />
+						<div class='help-error'><i class="icon icon-warning"></i> Name field is required!</div>
+					</div>
+					-->
+                    <div class="step step-confirm" data-step-id='7'>
                         <form action='post' name='signupForm' autocomplete="off" class="form-horizontal">
+							
                             <div class="form-group">
                                 <div class="control-label col-md-4">Name</div>
                                 <div class="col-md-8">
@@ -105,6 +172,63 @@
                                     </div>
                                 </div>
                             </div>
+							
+							<div class="form-group">
+								<div class="control-label col-md-4">Accomplish</div>
+								<div class="col-md-8">
+									<div class="input-container">
+										<select name="gender" class="selectpicker form-control" >
+										<option value="Purchase a Home Lower Interest Rates">Purchase a Home Lower Interest Rates</option>
+										<option value="Get Cash Out">Get Cash Out</option>
+										<option value="Consolidate Debt">Consolidate Debt</option>
+										<option value="Home Improvement">Home Improvement</option>
+										<option value="Cash for Future Needs">Cash for Future Needs</option>
+										<option value="Rate Reduction Finance">Rate Reduction Finance</option>
+										</select>
+										<a href="javascript:void(0)" class="editInput">EDIT</a>
+									</div>
+								</div>
+							</div>
+                            <div class="form-group">
+                                <div class="control-label col-md-4">Cash-Out</div>
+                                <div class="col-md-8">
+                                    <div class="input-container">
+                                        <input type="text" name="cashout" autocomplete="off" spellcheck="false" class="form-control" />
+                                        <a href="javascript:void(0)" class="editInput">EDIT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-md-4">Current Mortgage</div>
+                                <div class="col-md-8">
+                                    <div class="input-container">
+                                        <input type="text" name="current_mortgage" autocomplete="off" spellcheck="false" class="form-control" />
+                                        <a href="javascript:void(0)" class="editInput">EDIT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-md-4">Current Rate</div>
+                                <div class="col-md-8">
+                                    <div class="input-container">
+                                        <input type="text" name="name" autocomplete="off" spellcheck="false" class="form-control" />
+                                        <a href="javascript:void(0)" class="editInput">EDIT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-md-4">Kind of Loan</div>
+                                <div class="col-md-8">
+                                    <div class="input-container">
+                                        <input type="text" name="name" autocomplete="off" spellcheck="false" class="form-control" />
+                                        <a href="javascript:void(0)" class="editInput">EDIT</a>
+                                    </div>
+                                </div>
+                            </div>							
+							
+							
+							
+							<!--
                             <div class="form-group">
                                 <div class="control-label col-md-4">Hobbies</div>
                                 <div class="col-md-8">
@@ -127,6 +251,7 @@
                                     </div>
                                 </div>
                             </div>
+							-->
                             <div class="form-group">
                                 <div class="col-md-8 col-sm-12 col-md-offset-4 col-sm-offset-0">
                                     <label class="checkbox-inline agreement">
@@ -144,6 +269,8 @@
                         </form>
                     </div>
                 </div>
+				
+				
                 <div class='button-container'>
                     <div>
                         <a href="javascript:void(0)" class="btn btn-white btn-rounded nextStep" tabindex="0">Next Step →</a>
