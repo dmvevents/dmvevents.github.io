@@ -1887,9 +1887,21 @@
                       </div>
 
                       <div class="buy_buttons">
+                        <div class="flex-layout" style="padding:0; padding-bottom: 30px; background: #09357A; margin: auto; width: 33%;">
+                          <select name="types" id="types" class="calculate select-type" style="min-width: 210px;" onchange="getRates()">
+                            <option selected disabled hidden>Choose loan type</option>
+                            <option value="fha">FHA 3.5% Down</option>
+                            <option value="va">VA Zero Down</option>
+                            <option value="conv-3">Conventional 3% Down</option>
+                            <option value="conv-5">Conventional 5% Down</option>
+                            <option value="conv-10">Conventional 10% Down</option>
+                            <option value="conv-20">Conventional 20% Down</option>
+                          </select>
+                        </div>
+
                         <div class="flex-layout" style="padding:0; padding-bottom: 30px; background: #09357A;">
                           <!-- Button trigger modal -->
-                          <button style="font-weight: 800; display: block; margin: auto; background: #FF6306; border-color: #FF6306;" type="button" id="calculate_btn" class="calculate btn btn-brand-secondary" data-toggle="" data-target="">
+                          <button style="font-weight: 800; display: block; margin: auto; background: #FF6306; border-color: #FF6306;" type="button" id="calculate_btn" class="calculate btn btn-brand-secondary disabled" data-toggle="" data-target="" onclick="showRate()">
                             Calculate
                           </button>
                         </div>
@@ -1909,7 +1921,7 @@
                       <div class="remort_buttons" style="display:none;">
                         <div class="flex-layout" style="padding:0; padding-bottom: 30px; background: #09357A;">
                           <!-- Button trigger modal -->
-                          <button style="font-weight: 800; display: block; margin: auto; background: #FF6306; border-color: #FF6306;" type="button" id="" class="rem_calculate btn btn-brand-secondary" data-toggle="" data-target="">
+                          <button style="font-weight: 800; display: block; margin: auto; background: #FF6306; border-color: #FF6306;" type="button" id="" class="rem_calculate btn btn-brand-secondary disabled" data-toggle="" data-target="">
                             Calculate
                           </button>
                         </div>
@@ -1927,7 +1939,7 @@
 
                       <div class="flex-layout buy_results">
 
-                        <div class="results util-width-50 resfha">
+                        <div class="results util-width-50 resfha display-results" id="fha">
                           <div class="result-box">
                             <p class="p1">FHA 3.5% Down</p>
                             <!---->
@@ -1962,7 +1974,7 @@
                           </div>
                         </div>
 
-                        <div class="results util-width-50 resva">
+                        <div class="results util-width-50 resva display-results" id="va">
                           <div class="result-box">
                             <p class="p1">VA Zero Down</p>
 
@@ -2001,7 +2013,7 @@
                       <div class="flex-layout buy_results">
 
 
-                        <div class="results util-width-50 resconv3">
+                        <div class="results util-width-50 resconv3 display-results" id="conv-3">
                           <div class="result-box">
                             <p class="p1">Conventional 3% Down</p>
                             <p class="p_res">Down Payment: $ <span class="downp_res">0.00</span></p>
@@ -2026,7 +2038,7 @@
 
                         </div>
 
-                        <div class="results util-width-50 resconv5">
+                        <div class="results util-width-50 resconv5 display-results" id="conv-5">
                           <div class="result-box">
                             <p class="p1">Conventional 5% Down</p>
                             <p class="p_res">Down Payment: $ <span class="downp_res">0.00</span></p>
@@ -2055,7 +2067,7 @@
 
                       <div class="flex-layout buy_results">
 
-                        <div class="results util-width-50 resconv10">
+                        <div class="results util-width-50 resconv10 display-results" id="conv-10">
                           <div class="result-box">
                             <p class="p1">Conventional 10% Down</p>
 
@@ -2083,7 +2095,7 @@
 
                         </div>
 
-                        <div class="results util-width-50 resconv20">
+                        <div class="results util-width-50 resconv20 display-results" id="conv-20">
                           <div class="result-box">
                             <p class="p1">Conventional 20% Down</p>
 
@@ -2414,7 +2426,21 @@
 
 
               <script type="text/javascript">
+              var selectedType;
                 var calculator = $('.remort_calculator');
+
+                function getRates() {
+                  hideResults();
+                  var value = $('#types').val();
+                  $('#calculate_btn').removeClass('disabled');
+                  selectedType = value;
+                }
+
+                function showRate() {
+                  if (selectedType) {
+                    $(`#${selectedType}`).css('display', 'block');
+                  }
+                }
               </script>
 
               <script>
@@ -2431,6 +2457,7 @@
                                           formatPhone(this)}}function formatPhone(A){A.value=formatPhoneStr(A.value)}function formatPhoneStr(A){var C=A.replace(/[^0-9xX]/g,"");C=C.replace(/[xX]/g,"x");var B="";if(C.indexOf("x")>-1){B=" "+C.substr(C.indexOf("x"));C=C.substr(0,C.indexOf("x"))}switch(C.length){case (10):return C.replace(/(....)(...)(...)/g,"($1) $2 $3")+B;case (11):if(C.substr(0,1)=="1"){return C.substr(1).replace(/(....)(...)(...)/g,"($1) $2 $3")+B}break;default:}return A}
 
                                       window.onload=function(){doFormatPhone("calc_tel")};*/
+
               </script>
 
               <script type="text/javascript">
@@ -2813,6 +2840,12 @@
                   c20Chart.destroy();
                 }
 
+                function hideResults() {
+                  $('.display-results').each(function(index, el) {
+                    $(el).css({"display": "none"});
+                  })
+                }
+
                 //var firstclickPop = 1;
                 $('.calculate').click(function() {
                   /*if (firstclickPop == 0) {
@@ -2845,6 +2878,7 @@
                 $(document).ready(function() {
                   calculateOptions();
                   calculateRemortgage();
+                  hideResults();
                 });
                 /*
                         $('.ps2').html(paymentMonth);
@@ -3219,7 +3253,6 @@
                     window.parent.postMessage({
                       frameHeight: height
                     }, '*');
-                    console.log(height);
                   }
                 }
 
