@@ -1533,30 +1533,37 @@
 
                       <div class="flex-layout values-block" style="padding-top:0;">
                         <div class="input flex-input buy_block">
-
+                    <div class="form-row">
+                      <div class="col">
                           <div class="deal_value fg-purch-remort">
-                            <div class="form-group"><label>Home Price:</label>
-                              <div class="input-group">
-                                <span class="input-group-prepend">$</span>
-                                <input type="tel" class="form-control pur_price format_currency" value="300,000">
+                              <div class="form-group mb-2"><label>Home Price:</label>
+                                <div class="input-group">
+                                  <span class="input-group-prepend">$</span>
+                                  <input type="tel" class="form-control pur_price format_currency" value="300,000">
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <!-- </div> -->
 
-
-                          <div class=" loanTerm">
-                            <div class="form-group">
-                              <label>Loan Term:</label>
-                              <select class="form-control">
-                                <option value="180">
-                                  15 years
-                                </option>
-                                <option value="360" selected>
-                                  30 years
-                                </option>
-                              </select>
+						<!-- <div class="col"> -->
+                          <div class="col">
+                            <div class=" loanTerm">
+                              <div class="form-group">
+                                <label>Loan Term:</label>
+                                <select class="form-control">
+                                  <option value="180">
+                                    15 years
+                                  </option>
+                                  <option value="360" selected>
+                                    30 years
+                                  </option>
+                                </select>
+                              </div>
                             </div>
                           </div>
+                          <!-- </div> -->
+                    </div>
 
 
                           <label class="output-label hide" style="/*height: 19px; width: 20px;*/">Output will be</label>
@@ -1597,20 +1604,22 @@
                                       </div>
                                   </div> -->
 
-
-                          <div class="rep_inter_val fg-rep-int ">
-                            <div class="form-group">
-                              <label>Annual Interest:</label>
-                              <div class="input-group rep-div ">
-                                <input type="number" class="form-control notcurrency" value="2.625">
-                                <span class="input-group-append app-rep">%</span>
-                              </div>
-                              <!---->
+                    <div class="form-row">
+                      <div class="col">
+                          			<div class="rep_inter_val fg-rep-int ">
+                            			<div class="form-group">
+                             				<label>Annual Interest:</label>
+                              				<div class="input-group rep-div ">
+                                				<input type="number" class="form-control notcurrency" value="2.625">
+                                				<span class="input-group-append app-rep">%</span>
+                              				</div>
+                             				<!---->
+                            			</div>
+                          			</div>
                             </div>
-                          </div>
-
+                      <div class="col">
                           <div class="prop_tax">
-                            <div class="form-group">
+                            <div class="form-group mb-2">
                               <label>Property Tax (annual %):</label>
                               <div class="input-group rep-div ">
                                 <input type="number" class="form-control notcurrency" value="1.0">
@@ -1619,7 +1628,11 @@
                               <!---->
                             </div>
                           </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
 
+                      <div class="col">
                           <div class="mello_roos" style="display: none;">
                             <div class="form-group">
                               <label>Mello Roos (% annual):</label>
@@ -1639,17 +1652,23 @@
                               </div>
                             </div>
                           </div>
+                        </div>
 
+                      <div class="col">
                           <div class="home_insur">
-                            <div class="form-group"><label>Homeowner's Insurance: (Annual %)</label>
+                            <div class="form-group"><label>Homeowner's Insurance</label>
                               <div class="input-group">
                                 <input type="number" class="form-control" value="0.39">
                                 <span class="input-group-append app-rep">%</span>
                               </div>
                             </div>
                           </div>
+                      </div>
+                    </div>
 
-                          <div class="points">
+                    <div class="form-row">
+                      <div class="col">
+                        <div class="points">
                             <div class="form-group"><label>Points:</label>
                               <div class="input-group">
                                 <input type="number" class="form-control" value="0">
@@ -1657,24 +1676,45 @@
                               </div>
                             </div>
                           </div>
-
-                          <div class="closing_costs">
-                            <div class="form-group"><label>Closing Costs (estimated % over home value for taxes, title, transfer fees, and insurance):</label>
-                              <div class="input-group">
-                                <input type="number" class="form-control" value="4">
-                                <span class="input-group-append app-rep">%</span>
-                              </div>
-                            </div>
-                          </div>
-
                           <div class="int-only">
                             <div class="form-group">
                               <label for="int-only">Interest Only:</label>
                               <input style="width: 22px; height: 22px; vertical-align: middle; margin-left: 15px;" type="checkbox" name="int-only" class="" value="">
                             </div>
                           </div>
+                      </div>
+                      <div class="col">
+                        <div class="closing_costs">
+                          <div class="form-group"><label>Closing Costs</label>
+                            <div class="input-group">
+                              <input type="number" class="form-control" value="4">
+                              <span class="input-group-append app-rep">%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                          <p class="adv-opt-link">Advanced Options <span style="vertical-align: middle;" class="material-icons">keyboard_arrow_down</span></p>
+                    <div class="form-row">
+                      <div class="col">
+                      </div>
+                      <div class="col">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col">
+                      </div>
+                      <div class="col">
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+                          <p class="adv-opt-link">Advanced Options <span style="vertical-align: middle" style="2"  class="material-icons">keyboard_arrow_down</span></p>
                           <div style="display: none;" class="advanced-opt">
 
                             <h5>FHA 3.5% Down</h5>
