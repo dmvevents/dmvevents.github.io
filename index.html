@@ -641,7 +641,7 @@
                                 <p>We are your local experts dedicated to helping you accomplish your homeownership goals. We take pride in closing your transaction in as little as 15 days while providing some of the lowest rates available in the market. We are Tested, proven, and Reliable.</p>
                             </div>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="advisor-link">
                         <a href="form.html">
                             GET STARTED
@@ -765,7 +765,7 @@
             </div>
         </div>
         <!-- End Among -->
-        
+
         <!-- Quote -->
         <div class="one-quote-area">
             <div class="container">
@@ -787,8 +787,8 @@
                     </div>
                                             <iframe src="https://housingbrief.com/widget/mortgage-rates/tabbed/5fcb8db613238426045c6d91/p/5fcb9d6113238426045c72d8?sn=true&sc=true&rs=mnd|fm|mba&c=336699&w=298&bgc=ffffff&tc=333333"  width="100%" height="485" frameborder="0" scrolling="no" style="border: solid 1px #cecece; border-width: 1px;box-sizing:border-box;height:485px;display:block;"></iframe>
                 </div>
-                
-                
+
+
             </div>
         </div>
         <!-- End Quote -->
@@ -1065,7 +1065,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-6 col-lg-4">
                         <div class="testimonial-item active">
                             <div class="testimonial-top">
@@ -1098,7 +1098,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
                         <div class="testimonial-item">
                             <div class="testimonial-top">
@@ -1148,17 +1148,28 @@
                     <div class="col-lg-7 p-0">
                         <div class="contact-content">
                             <div class="one-section-title">
-                                <span class="sub-title">LET’S CONTACT</span>
+                                <span class="sub-title">LET’S CONNECT</span>
                                 <h2>Contact With Us</h2>
                             </div>
-                            <form id="contactForm">
+                            <form id="contactForm" name="bntWebForm" method="post" action="https://www.bntouchmortgage.net/api/webform/">
                                 <div class="row m-0">
+
                                     <div class="col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <label>
                                                 <i class='bx bx-user'></i>
                                             </label>
-                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
+                                            <input type="text" name="name_1" id="name" class="form-control" required data-error="Please enter your name" placeholder="First Name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class='bx bx-user'></i>
+                                            </label>
+                                            <input type="text" name="name_2_only" id="name" class="form-control" required data-error="Please enter your name" placeholder="Last Name">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -1178,11 +1189,63 @@
                                             <label>
                                                 <i class='bx bx-phone-call'></i>
                                             </label>
-                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                            <input type="text" name="phone_cell" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class='bx bx-phone-call'></i>
+                                            </label>
+                                            <input type="text" name="phone_h" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="row m-0">
+											                      <span class="sub-title">Co Borrower</span>
+                                        </div>
+                                    </div>
+
+                                    </br>
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class='bx bx-user'></i>
+                                            </label>
+                                            <input type="text" name="co_name_1" id="name" class="form-control" required data-error="Please enter your name" placeholder="Co-Borrower First Name">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class='bx bx-user'></i>
+                                            </label>
+                                            <input type="text" name="co_name_2" id="name" class="form-control" required data-error="Please enter your name" placeholder="Co-Borrower Last Name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class='bx bx-mail-send'></i>
+                                            </label>
+                                            <input type="email" name="email_2" id="email" class="form-control" required data-error="Please enter your email" placeholder="Co-Borrower Email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <input name="RETURNTIMEOUT" type="hidden" value="10">
+                                    <input name="USERID" type="hidden" value="16977">
+                                    <input name="GROUPID" type="hidden" value="1">
+                                    <input name="SEQUENCEID" type="hidden" value="2">
+                                    <input name="WEBFORMID" type="hidden" value="4282">
+                                    <input name="PROCESSTYPE" type="hidden" value="mortgage">
+
+<!--
                                     <div class="col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <label>
@@ -1192,7 +1255,9 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
+ -->
 
+<!--
                                     <div class="col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label>
@@ -1202,14 +1267,15 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
+ -->
 
                                     <div class="col-md-12 col-lg-12">
                                         <div class="row m-0">
                                             <div class="col-sm-4 col-lg-4 pl-0">
-                                                <button type="submit" class="contact-btn btn">
+                                                <button type="submit" form="contactForm" class="contact-btn btn">
                                                     <i class='bx bx-plus'></i>
-                                                    Send Message
-                                                </button>
+                                                    Connect
+                                                    <!-- <input type="submit" value="Submit"> -->
                                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -1217,7 +1283,7 @@
                                                 <div class="contact-emergency">
                                                     <i class='bx bx-phone-call'></i>
                                                     <span>Emergency Contact</span>
-                                                    <a href="tel:+44554348554">+445 543 48554</a>
+                                                    <a href="tel:+44554348554">+1240-552-LEND(5363)</a>
                                                 </div>
                                             </div>
                                         </div>
